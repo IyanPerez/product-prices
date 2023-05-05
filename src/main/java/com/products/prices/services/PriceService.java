@@ -1,22 +1,30 @@
 package com.products.prices.services;
 
+import java.sql.Date;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.products.prices.models.Price;
-import com.products.prices.repositories.ProfileRepository;
-
-import lombok.AllArgsConstructor;
+import com.products.prices.repositories.PriceRepository;
 
 @Service
-@AllArgsConstructor
+
 public class PriceService {
     
-    private ProfileRepository profileRepository;
+    @Autowired
+    private PriceRepository priceRepository;
 
     public List<Price> getAll(){
-        return profileRepository.findAll();
+        return priceRepository.findAll();
     }
+    
+    public List<Price> getQuery(Date actualDate, Long productId, Long brandId){
+
+
+        return priceRepository.getFilteredPrices(actualDate, productId, brandId);
+    }
+
     
 }
