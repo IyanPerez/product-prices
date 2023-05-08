@@ -17,7 +17,7 @@ public class PriceDto {
     private Long priceList;
     private Timestamp startDate;
     private Timestamp endDate;
-    private Float priceValue;
+    private Double priceValue;
 
     public Timestamp getStartDate() {
         return startDate;
