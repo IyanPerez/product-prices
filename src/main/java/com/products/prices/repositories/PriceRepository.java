@@ -1,6 +1,6 @@
 package com.products.prices.repositories;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -15,6 +15,6 @@ public interface PriceRepository extends JpaRepository<Price, Long> {
            "WHERE :actualDate BETWEEN price.startDate AND price.endDate " +
            "AND price.productId = :productId " +
            "AND price.brandId = :brandId")
-    List<Price> findFilteredPrices(Date actualDate, Long productId, Long brandId);
+    List<Price> findFilteredPrices(Timestamp actualDate, Long productId, Long brandId);
 
 }

@@ -1,6 +1,7 @@
 package com.products.prices.models;
 
-import java.sql.Date;
+
+import java.sql.Timestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -27,9 +28,9 @@ public class Price {
     @Column(name = "BRAND_ID", nullable = false)
     private Long brandId;
     @Column(name = "START_DATE", nullable = false)
-    private Date startDate;
+    private Timestamp startDate;
     @Column(name = "END_DATE", nullable = false)
-    private Date endDate;
+    private Timestamp endDate;
     @Column(name = "PRICE_LIST", nullable = false)
     private Long priceList;
     @Column(name = "PRODUCT_ID", nullable = false)

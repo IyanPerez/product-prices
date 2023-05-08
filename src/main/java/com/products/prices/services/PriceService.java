@@ -1,6 +1,6 @@
 package com.products.prices.services;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class PriceService {
     }
 
     public List<Price> sendQuery(PriceQueryRequest queryRequest) {
-        Date actualDate = queryRequest.getActualDate();
+        Timestamp actualDate = queryRequest.getActualDate();
         Long productId = queryRequest.getProductId();
         Long brandId = queryRequest.getBrandId();
         return priceRepository.findFilteredPrices(actualDate, productId, brandId);

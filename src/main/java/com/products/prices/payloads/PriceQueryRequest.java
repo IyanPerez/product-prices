@@ -1,6 +1,6 @@
 package com.products.prices.payloads;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -15,7 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class PriceQueryRequest {
     @Temporal(TemporalType.DATE)
-    private Date actualDate;
+    private Timestamp actualDate;
     private Long productId;
     private Long brandId;
 

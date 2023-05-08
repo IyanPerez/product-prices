@@ -1,6 +1,6 @@
 package com.products.prices.controllers;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class PriceController {
 
     @GetMapping(path = "/query/{actualDate}/{productId}/{brandId}")
     public List<Price> getFilteredPrices(
-        @PathVariable("actualDate") Date actualDate,
+        @PathVariable("actualDate") Timestamp actualDate,
         @PathVariable("productId") Long productId,
         @PathVariable("brandId") Long brandId) {
         PriceQueryRequest queryRequest = new PriceQueryRequest(actualDate, productId, brandId);
