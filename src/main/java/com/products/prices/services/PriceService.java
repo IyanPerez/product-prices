@@ -27,7 +27,7 @@ public class PriceService {
         Date actualDate = queryRequest.getActualDate();
         Long productId = queryRequest.getProductId();
         Long brandId = queryRequest.getBrandId();
-        return priceRepository.findByStartDateAndProductIdAndBrandId(actualDate, productId, brandId);
+        return priceRepository.findFilteredPrices(actualDate, productId, brandId);
     }
 
 }
