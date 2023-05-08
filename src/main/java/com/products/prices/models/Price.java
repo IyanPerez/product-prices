@@ -18,26 +18,27 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="PRICES")
+@Table(name = "PRICES")
 public class Price {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name = "ID_PRODUCT_PRICE")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID_PRODUCT_PRICE")
     private Long id;
-    @Column(name = "BRAND_ID", nullable = false )
+    @Column(name = "BRAND_ID", nullable = false)
     private Long brandId;
-    @Column(name = "START_DATE",nullable = false) 
+    @Column(name = "START_DATE", nullable = false)
     private Date startDate;
-    @Column(name = "END_DATE",nullable = false) 
+    @Column(name = "END_DATE", nullable = false)
     private Date endDate;
-    @Column(name = "PRICE_LIST",nullable = false) 
+    @Column(name = "PRICE_LIST", nullable = false)
     private Long priceList;
-    @Column(name = "PRODUCT_ID",nullable = false) 
+    @Column(name = "PRODUCT_ID", nullable = false)
     private Long productId;
-    @Column(name = "PRIORITY",nullable = false) 
+    @Column(name = "PRIORITY", nullable = false)
     private Long priority;
-    @Column(name = "PRICE",nullable = false) 
+    @Column(name = "PRICE", nullable = false)
     private Float price;
-    @Column(name = "CURR",nullable = false) 
+    @Column(name = "CURR", nullable = false)
     private String currency;
 
 }
-
