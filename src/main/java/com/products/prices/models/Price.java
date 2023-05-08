@@ -37,7 +37,7 @@ public class Price {
     @Column(name = "PRIORITY", nullable = false)
     private Long priority;
     @Column(name = "PRICE", nullable = false)
-    private Float price;
+    private Float priceValue;
     @Column(name = "CURR", nullable = false)
     private String currency;
 

@@ -44,7 +44,7 @@ public class PriceService {
             priceDto.setPriceList(price.getPriceList());
             priceDto.setStartDate(price.getStartDate());
             priceDto.setEndDate(price.getEndDate());
-            priceDto.setPrice(price.getPrice());
+            priceDto.setPriceValue(price.getPriceValue());
             
             pricesDtos.add(priceDto);
         }
