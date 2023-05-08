@@ -23,7 +23,7 @@ public class PriceService {
 
     }
 
-    public List<Price> sendQuery(PriceQueryRequest queryRequest) {
+    public List<Price> getFilterdPrices(PriceQueryRequest queryRequest) {
         Timestamp actualDate = queryRequest.getActualDate();
         Long productId = queryRequest.getProductId();
         Long brandId = queryRequest.getBrandId();

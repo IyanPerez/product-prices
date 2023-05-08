@@ -26,12 +26,12 @@ public class PriceController {
     }
 
     @GetMapping(path = "/query/{actualDate}/{productId}/{brandId}")
-    public List<Price> getFilteredPrices(
+    public List<Price> getQueryFilterPrices(
         @PathVariable("actualDate") Timestamp actualDate,
         @PathVariable("productId") Long productId,
         @PathVariable("brandId") Long brandId) {
         PriceQueryRequest queryRequest = new PriceQueryRequest(actualDate, productId, brandId);
-        return priceService.sendQuery(queryRequest);
+        return priceService.getFilterdPrices(queryRequest);
     }
 
 }
