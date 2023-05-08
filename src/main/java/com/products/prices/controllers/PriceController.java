@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.products.prices.dto.PriceDto;
 import com.products.prices.models.Price;
 import com.products.prices.payloads.PriceQueryRequest;
 import com.products.prices.services.PriceService;
@@ -26,7 +27,7 @@ public class PriceController {
     }
 
     @GetMapping(path = "/query/{actualDate}/{productId}/{brandId}")
-    public List<Price> getQueryFilterPrices(
+    public List<PriceDto> getQueryFilterPrices(
         @PathVariable("actualDate") Timestamp actualDate,
         @PathVariable("productId") Long productId,
         @PathVariable("brandId") Long brandId) {
