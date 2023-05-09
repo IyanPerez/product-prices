@@ -7,7 +7,8 @@ This is the DB:
 
 And this is how it works on postman:
 
-<img width="600" alt="prices table" src="https://user-images.githubusercontent.com/116182389/236961233-ce38b2f1-ec31-4c66-b9c9-c114becebc39.gif">
+<img width="900" alt="prices table" src="https://user-images.githubusercontent.com/116182389/236965005-6ba7ade1-4a8a-4045-921f-54748ff9ee7c.gif">
+
 
 
 ## Project Setup and Dependencies
